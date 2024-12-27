@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Effect</title>
+    <style>
+        a {
+            text-decoration: none;
+            color: green;
+            border: 2px solid green;
+            padding: 5px 10px;
+            font-family: Arial, sans-serif;
+        }
+        a:hover {
+            background-color: green;
+            color: white;
+        }
+        ul {
+            background-color: yellow;
+            padding: 10px;
+            list-style-type: square;
+        }
+        li {
+            color: black; 
+            margin-left: 50px;
+        }
+        li::marker {
+            color: orange; 
+        }
+        .container {
+            position: relative;
+            font-family: Arial, sans-serif;
+        }
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50px;
+            height: 100px;
+            background-color: orange;
+            z-index: -1;
+        }
+        h1 {
+            font-size: 24px;
+            color: black;
+        }
+        p {
+            font-size: 14px;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <br><br><br>
+    <a href="#">This is a link</a>
+    <br><br><br>
+    <ul>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Coca Cola</li>
+    </ul>
+    <br><br><br>
+    <div class="container">
+        <h1>This is a heading</h1>
+        <p>Because the image has a z-index of -1, it will be placed behind the text.</p>
+    </div>
+</body>
+</html>
